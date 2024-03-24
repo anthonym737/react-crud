@@ -1,10 +1,11 @@
+require('dotenv').config();
 const sql = require('mssql');
 
 const config = {
-    user: 'sa',
-    password: 'Info76240#',
-    database: 'users',
-    server: 'amopc22',
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    server: process.env.DB_SERVER,
     pool: {
         max: 10,
         min: 0,
